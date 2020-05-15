@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "slug": "zwave2mqtt",
   "description": "Fully configurable Z-Wave to MQTT gateway and control panel",
-  "url": "https://github.com/outkastm/addon-zwave2mqtt/zwave2mqtt",
+  "url": "https://github.com/outkastm/addon-zwave2mqtt",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:8091]",
   "startup": "system",
   "init": false,
