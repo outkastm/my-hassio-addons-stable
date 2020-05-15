@@ -1,7 +1,7 @@
 {
   "name": "Z-Wave to MQTT-dev",
   "version": "0.2.0-dev",
-  "slug": "zwave2mqtt",
+  "slug": "zwave2mqtt-dev",
   "description": "Fully configurable Z-Wave to MQTT gateway and control panel",
   "url": "https://github.com/outkastm/my-hassio-addons/zwave2mqtt-dev",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:8091]",
