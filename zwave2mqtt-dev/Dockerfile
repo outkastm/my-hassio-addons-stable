@@ -13,6 +13,7 @@ RUN \
         git=2.24.3-r0 \
         linux-headers=4.19.36-r0 \
         npm=12.15.0-r1 \
+		openzwave-dev=1.6.974-r0 \
         python2-dev~=2.7 \
         yarn=1.19.2-r0 \
     \
@@ -24,6 +25,7 @@ RUN \
         nginx=1.16.1-r6 \
         nodejs=12.15.0-r1 \
         openssl=1.1.1g-r0 \
+		openzwave=1.6.974-r0 \
     \
     && curl -J -L -o /tmp/openzwave-lib.tar.gz \
         "https://github.com/outkastm/Openzwave-armv7/releases/download/1.0/OpenZwave.1.6.1123.tar.gz" \
@@ -32,10 +34,10 @@ RUN \
         /tmp/openzwave-lib.tar.gz \
         --strip 1 -C /tmp/openzwave \
 	\
-	&& mv /tmp/openzwave/include/openzwave /usr/include \
-	&& cp -af /tmp/openzwave/bin/* /usr/bin \
-	&& cp -af /tmp/openzwave/lib/pkgconfig/libopenzwave.pc /usr/lib/pkgconfig \
-	&& cp -af /tmp/openzwave/lib/* /usr/lib \
+	&& rm -f -r /usr/include/openzwave && mv /tmp/openzwave/include/openzwave /usr/include \
+	&& cp -f -a /tmp/openzwave/bin/* /usr/bin \
+	&& cp -f -a /tmp/openzwave/lib/pkgconfig/libopenzwave.pc /usr/lib/pkgconfig \
+	&& cp -f -a /tmp/openzwave/lib/* /usr/lib \
 	&& mv /tmp/openzwave/usr/share/doc/openzwave-1.6.1123 /usr/share/doc \
 	\
     && curl -J -L -o /tmp/openzwave-db.tar.gz \
