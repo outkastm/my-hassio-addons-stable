@@ -25,11 +25,11 @@ RUN \
         nodejs=12.15.0-r1 \
         openssl=1.1.1g-r0 \
     \
-    && curl -J -L -o /tmp/openzwave-db.tar.gz \
+    && curl -J -L -o /tmp/openzwave-lib.tar.gz \
         "https://github.com/outkastm/Openzwave-armv7/releases/download/1.0/OpenZwave.1.6.1123.tar.gz" \
     && mkdir /tmp/openzwave \
     && tar zxvf \
-        /tmp/openzwave-db.tar.gz \
+        /tmp/openzwave-lib.tar.gz \
         --strip 1 -C / \
 	\
     && curl -J -L -o /tmp/openzwave-db.tar.gz \
