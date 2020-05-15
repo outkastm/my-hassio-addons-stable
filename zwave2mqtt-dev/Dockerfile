@@ -13,7 +13,6 @@ RUN \
         git=2.24.3-r0 \
         linux-headers=4.19.36-r0 \
         npm=12.15.0-r1 \
-        openzwave-dev=1.6.974-r0 \
         python2-dev~=2.7 \
         yarn=1.19.2-r0 \
     \
@@ -25,8 +24,14 @@ RUN \
         nginx=1.16.1-r6 \
         nodejs=12.15.0-r1 \
         openssl=1.1.1g-r0 \
-        openzwave=1.6.974-r0 \
     \
+    && curl -J -L -o /tmp/openzwave-db.tar.gz \
+        "https://github.com/outkastm/Openzwave-armv7/releases/download/1.0/OpenZwave.1.6.1123.tar.gz" \
+    && mkdir /tmp/openzwave \
+    && tar zxvf \
+        /tmp/openzwave-db.tar.gz \
+        --strip 1 -C / \
+	\
     && curl -J -L -o /tmp/openzwave-db.tar.gz \
         "http://old.openzwave.com/downloads/openzwave-1.6.1123.tar.gz" \
     && mkdir /tmp/db \
@@ -81,12 +86,12 @@ ARG BUILD_VERSION
 
 # Labels
 LABEL \
-    io.hass.name="Z-Wave to MQTT" \
+    io.hass.name="Z-Wave to MQTT dev" \
     io.hass.description="Fully configurable Z-Wave to MQTT gateway and control panel." \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Franck Nijhof <frenck@addons.community>" \
+    maintainer="Irinel Porcariu <irinel.porcariu@gmail.com>" \
     org.label-schema.description="Fully configurable Z-Wave to MQTT gateway and control panel." \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Z-Wave to MQTT" \
