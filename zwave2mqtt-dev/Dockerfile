@@ -27,19 +27,6 @@ RUN \
         openssl=1.1.1g-r0 \
         openzwave=1.6.974-r0 \
     \
-    && curl -J -L -o /tmp/openzwave-lib.tar.gz \
-        "https://github.com/outkastm/Openzwave-armv7/releases/download/1.0/OpenZwave.1.6.1123.tar.gz" \
-    && mkdir /tmp/openzwave \
-    && tar zxvf \
-        /tmp/openzwave-lib.tar.gz \
-        --strip 1 -C /tmp/openzwave \
-	\
-    && rm -f -r /usr/include/openzwave && mv /tmp/openzwave/include/openzwave /usr/include \
-    && cp -f -a /tmp/openzwave/bin/* /usr/bin \
-    && cp -f -a /tmp/openzwave/lib/pkgconfig/libopenzwave.pc /usr/lib/pkgconfig \
-    && cp -f -a /tmp/openzwave/lib/* /usr/lib \
-    && mv /tmp/openzwave/usr/share/doc/openzwave-1.6.1123 /usr/share/doc \
-    \
     && curl -J -L -o /tmp/openzwave-db.tar.gz \
         "http://old.openzwave.com/downloads/openzwave-1.6.1123.tar.gz" \
     && mkdir /tmp/db \
