@@ -30,7 +30,13 @@ RUN \
     && mkdir /tmp/openzwave \
     && tar zxvf \
         /tmp/openzwave-lib.tar.gz \
-        --strip 1 -C / \
+        --strip 1 -C /tmp/openzwave \
+	\
+	&& mv /tmp/openzwave/include/openzwave /usr/include \
+	&& cp -af /tmp/openzwave/bin/* /usr/bin \
+	&& cp -af /tmp/openzwave/lib/pkgconfig/libopenzwave.pc /usr/lib/pkgconfig \
+	&& cp -af /tmp/openzwave/lib/* /usr/lib \
+	&& mv /tmp/openzwave/usr/share/doc/openzwave-1.6.1123 /usr/share/doc \
 	\
     && curl -J -L -o /tmp/openzwave-db.tar.gz \
         "http://old.openzwave.com/downloads/openzwave-1.6.1123.tar.gz" \
