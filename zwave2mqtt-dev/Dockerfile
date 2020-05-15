@@ -37,7 +37,7 @@ RUN \
     && curl -J -L -o /tmp/openzwave-lib.tar.gz \
         "https://github.com/outkastm/Openzwave-armv7/releases/download/1.0/OpenZwave.1.6.1123.tar.gz" \
     && mkdir /tmp/openzwavelib \
-	&& tar zxvf \
+    && tar zxvf \
 	    /tmp/openzwave-lib.tar.gz \
         --strip 1 -C /tmp/openzwavelib \
     && cp -af /tmp/openzwavelib/usr/bin/* /usr/bin \
