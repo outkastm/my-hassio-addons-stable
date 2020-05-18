@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:7.1.1
+ARG BUILD_FROM=hassioaddons/base:7.2.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -39,7 +39,7 @@ RUN \
     && mv /tmp/db/config/* /etc/openzwave \
     \
     && curl -J -L -o /tmp/zwave2mqtt.tar.gz \
-        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.1.0.tar.gz" \
+        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.2.0.tar.gz" \
     && tar zxvf \
         /tmp/zwave2mqtt.tar.gz \
         --strip 1 -C /opt \
