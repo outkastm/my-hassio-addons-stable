@@ -42,5 +42,5 @@
     "keyfile": "str",
     "leave_front_door_open": "bool?"
   },
-  "image": "outkastm/zwave2mqtt-{arch}"
+  "image": "outkastm/zwave2mqtt-okm-{arch}"
 }
