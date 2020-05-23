@@ -253,7 +253,7 @@ stages:
 .publish: &publish
   stage: publish
   image:
-    name: hassioaddons/repository-updater:latest
+    name: outkastm/repository-updater:latest
     entrypoint: [""]
   script:
     - |
