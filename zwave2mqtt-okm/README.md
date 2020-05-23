@@ -43,4 +43,4 @@ Some advantages and use-cases for this are:
 [patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [release-shield]: https://img.shields.io/badge/version-v0.6.0-blue.svg
-[release]: https://github.com/hassio-addons/addon-zwave2mqtt/tree/v0.6.0
+[release]: https://github.com/my-hassio-addons/addon-zwave2mqtt-okm/tree/v0.0.1
