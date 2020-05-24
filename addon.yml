@@ -27,9 +27,9 @@ variables:
   ADDON_QEMU: "false"
 
   ADDON_PUBLISH: "true"
-  ADDONS_REPO_STABLE: "hassio-addons/repository"
-  ADDONS_REPO_BETA: "hassio-addons/repository-beta"
-  ADDONS_REPO_EDGE: "hassio-addons/repository-edge"
+  ADDONS_REPO_STABLE: "outkastm/my-hassio-addons"
+  ADDONS_REPO_BETA: "outkastm/my-hassio-addons-beta"
+  ADDONS_REPO_EDGE: "outkastm/my-hassio-addons-edge"
 
   PREFLIGHT_HADOLINT: "true"
   PREFLIGHT_JSONLINT: "true"
